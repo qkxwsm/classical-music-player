@@ -2,7 +2,7 @@ from moviepy.video.io.VideoFileClip import VideoFileClip
 
 # Define the input file and cutoff points
 input_file = "file.mp4"
-cutoff_points = ["0:00", "1:00"]
+cutoff_points = ["0:00", "6:14", "11:05", "16:38"]
 
 # Convert cutoff points to seconds
 def time_to_seconds(time_str):
@@ -20,6 +20,6 @@ for i in range(len(cutoff_seconds) - 1):
     end_time = cutoff_seconds[i + 1]
     segment = video.subclip(start_time, end_time)
     output_file = f"clip_{i+1}.mp4"
-    segment.write_videofile(output_file, codec="libx264", audio_codec="aac")
+    segment.write_videofile(output_file, codec="libx264", audio_codec="aac", audio=True)
 
 print("Clipping completed!")
