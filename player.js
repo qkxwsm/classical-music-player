@@ -64,7 +64,7 @@ function updNext() {
     if (queueIndex !== queue.length) {
         const nxt = queue[queueIndex];
         document.getElementById('next').innerHTML = toString(nxt, true);
-    } 
+    }
     else {
         document.getElementById('next').innerHTML = "undefined";
     }
@@ -94,7 +94,7 @@ function playNext() {
     queueIndex++;
     if (queueIndex === queue.length && autoPlay) {
         enqueue();
-    } 
+    }
     else {
         updNext();
     }
@@ -108,7 +108,7 @@ function toggle() {
         document.getElementById('audio').removeEventListener('ended', listener);
         document.getElementById('autoplay').innerHTML = "Off";
         autoPlay = false;
-    } 
+    }
     else {
         document.getElementById('audio').addEventListener('ended', listener, false);
         enqueue();
@@ -132,7 +132,7 @@ function gen() {
                 pid++;
             }
             break;
-        case 1: 
+        case 1:
             // ID
             pid = required_value;
             break;
@@ -198,7 +198,7 @@ function play() {
     queueIndex = queue.length;
     if (autoPlay) {
         enqueue();
-    } 
+    }
     else {
         updNext();
     }
@@ -244,7 +244,7 @@ function playBy(type, forcePlay) {
     }
     if (forcePlay) {
         play();
-    } 
+    }
     else {
         console.log("Enqueueing: " + required_value);
         enqueue();
@@ -273,7 +273,7 @@ function playAlbum() {
         required_value = pieces[i][0] + " by " + pieces[i][1];
         if (i == 0) {
             play();
-        } 
+        }
         else {
             enqueue();
         }

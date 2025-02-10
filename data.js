@@ -22,7 +22,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Concerto No 4 Mvt 2", "e minor", "Beethoven", 6, 4, "Classical", [], "Piano Concerto No 4"],
 ["Piano Concerto No 4 Mvt 3", "G Major", "Beethoven", 10, 3, "Classical", ["stamina"], "Piano Concerto No 4"],
 ["Piano Concerto No 5 Mvt 1", "Eb Major", "Beethoven", 21, 4, "Classical", [], "Piano Concerto No 5"],
-["Piano Concerto No 5 Mvt 2", "B Major", "Beethoven", 9, 3,  "Classical", ["uplifting", "tender"], "Piano Concerto No 5"],
+["Piano Concerto No 5 Mvt 2", "B Major", "Beethoven", 9, 3, "Classical", ["uplifting", "tender"], "Piano Concerto No 5"],
 ["Piano Concerto No 5 Mvt 3", "Eb Major", "Beethoven", 12, 4, "Classical", [], "Piano Concerto No 5"],
 ["Rage over a Lost Penny", "G Major", "Beethoven", 6, 4, "Classical", ["stamina"], ""],
 ["Sonata No 1 Mvt 14", "f minor", "Beethoven", 7, 3, "Classical", ["stamina"], "Early Sonatas"],
@@ -170,15 +170,17 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Concerto No 2 Op 21 Mvt 2", "Ab Major", "Chopin", 12, 4, "Romantic", ["tender"], "Piano Concerto No 2"],
 ["Piano Concerto No 2 Op 21 Mvt 3", "f minor", "Chopin", 10, 2, "Romantic", [], "Piano Concerto No 2"],
 ["Polonaise Fantaisie Op 61", "Ab Major", "Chopin", 14, 4, "Romantic", ["experimental"], ""],
-["Polonaise Op 26 No 1", "c# minor", "Chopin", 8, 4, "Romantic", ["dark"], ""],
-["Polonaise Op 26 No 2", "eb minor", "Chopin", 8, 3, "Romantic", [], ""],
-["Polonaise Op 40 No 1", "A Major", "Chopin", 5, 3, "Romantic", ["stamina"], ""],
-["Polonaise Op 40 No 2", "c minor", "Chopin", 8, 5, "Romantic", [], ""],
-["Polonaise Op 44", "f# minor", "Chopin", 11, 4, "Romantic", ["dark", "stamina"], ""],
-["Polonaise Op 53", "Ab Major", "Chopin", 7, 3, "Romantic", ["stamina"], ""],
+["Polonaise Op 26 No 1", "c# minor", "Chopin", 8, 4, "Romantic", ["dark"], "7 Polonaises"],
+["Polonaise Op 26 No 2", "eb minor", "Chopin", 8, 3, "Romantic", [], "7 Polonaises"],
+["Polonaise Op 40 No 1", "A Major", "Chopin", 5, 3, "Romantic", ["stamina"], "7 Polonaises"],
+["Polonaise Op 40 No 2", "c minor", "Chopin", 8, 5, "Romantic", [], "7 Polonaises"],
+["Polonaise Op 44", "f# minor", "Chopin", 11, 4, "Romantic", ["dark", "stamina"], "7 Polonaises"],
+["Polonaise Op 53", "Ab Major", "Chopin", 7, 3, "Romantic", ["stamina"], "7 Polonaises"],
 ["Polonaise Op 71 No 1", "d minor", "Chopin", 6, 5, "Romantic", [], ""],
 ["Polonaise Op 71 No 2", "Bb Major", "Chopin", 7, 4, "Romantic", [], ""],
 ["Polonaise Op 71 No 3", "f minor", "Chopin", 8, 5, "Romantic", [], ""],
+["Polonaise Op Posth B 1", "g minor", "Chopin", 3, 5, "Romantic", [], ""],
+["Polonaise Op Posth B 6", "g# minor", "Chopin", 7, 5, "Romantic", [], ""],
 ["Prelude Op 28 No 1", "C Major", "Chopin", 1, 4, "Romantic", [], ""],
 ["Prelude Op 28 No 4", "e minor", "Chopin", 3, 4, "Romantic", ["tender"], ""],
 ["Prelude Op 28 No 11", "B Major", "Chopin", 1, 5, "Romantic", [], ""],
@@ -231,6 +233,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Mouvement", "C Major", "Debussy", 4, 4, "Romantic", ["stamina"], ["Images Book 1", 3]],
 ["Nocturne L 82", "Db Major", "Debussy", 7, 5, "Romantic", ["impressions"], ""],
 ["Pagodas", "B Major", "Debussy", 6, 3, "Romantic", ["impressions"], ["Estampes", 1]],
+["Petite Suite", "G Major", "Debussy", 14, 5, "Romantic", ["impressions"], ""],
 ["Prelude from Suite Bergamasque", "F Major", "Debussy", 5, 4, "Romantic", [], ["Suite Bergamasque", 1]],
 ["Prelude L 117 No 1", "Bb Major", "Debussy", 4, 5, "Romantic", ["impressions"], "Preludes L 117"],
 ["Prelude L 117 No 2", "", "Debussy", 5, 5, "Romantic", ["impressions"], "Preludes L 117"],
@@ -245,7 +248,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Prelude L 117 No 11", "f minor", "Debussy", 3, 5, "Romantic", ["impressions"], "Preludes L 117"],
 ["Prelude L 117 No 12", "G Major", "Debussy", 3, 4, "Romantic", ["impressions"], "Preludes L 117"],
 ["Passapied", "f# minor", "Debussy", 4, 5, "Romantic", [], ["Suite Bergamasque", 4]],
-["Reflections in the Water", "Db Major", "Debussy", 5, 3,  "Romantic", ["sleepy", "impressions"], ["Images Book 1", 1]],
+["Reflections in the Water", "Db Major", "Debussy", 5, 3, "Romantic", ["sleepy", "impressions"], ["Images Book 1", 1]],
 ["Reverie", "F Major", "Debussy", 5, 4, "Romantic", [], ""],
 ["Serenade for the Doll", "E Major", "Debussy", 3, 4, "Romantic", [], ["Childrens Corner", 3]],
 ["The Little Shepherd", "A Major", "Debussy", 3, 5, "Romantic", [], ["Childrens Corner", 5]],
@@ -305,17 +308,17 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Au bord dune source", "Ab Major", "Liszt", 4, 4, "Romantic", ["tender", "sleepy"], ["Years of Pilgrimage 1: Switzerland S 160", 4]],
 ["Au lac de Wallenstadt", "Ab Major", "Liszt", 4, 2, "Romantic", ["tender", "sleepy"], ["Years of Pilgrimage 1: Switzerland S 160", 2]],
 ["Ave Maria S 173 No 2", "Bb Major", "Liszt", 9, 5, "Romantic", ["tender", "sleepy"], ""],
-["Ballade No 1 S 170", "Db Major", "Liszt", 8, 4, "Romantic", ["experimental"], ""],
-["Ballade No 2 S 171", "b minor", "Liszt", 16, 4, "Romantic", ["experimental"], ""],
+["Ballade No 1 S 170", "Db Major", "Liszt", 8, 4, "Romantic", ["experimental"], "Ballades"],
+["Ballade No 2 S 171", "b minor", "Liszt", 16, 4, "Romantic", ["experimental"], "Ballades"],
 ["Benediction de Dieu dans la solitude S 173 No 3", "F# Major", "Liszt", 18, 1, "Romantic", ["legendary", "tender", "sleepy", "zen"], ""],
 ["Berceuse S 186 No 7", "F# Major", "Liszt", 4, 4, "Romantic", ["tender", "sleepy"], ""],
 ["Chapelle de Guillaume Tell", "C Major", "Liszt", 6, 5, "Romantic", [], ["Years of Pilgrimage 1: Switzerland S 160", 1]],
-["Consolation No 1", "E Major", "Liszt", 2, 4, "Romantic", ["tender", "sleepy"], "6 Consolations S 172"],
-["Consolation No 2", "E Major", "Liszt", 4, 4, "Romantic", ["tender", "sleepy"], "6 Consolations S 172"],
-["Consolation No 3", "Db Major", "Liszt", 6, 2, "Romantic", ["tender", "sleepy", "zen"], "6 Consolations S 172"],
-["Consolation No 4", "Db Major", "Liszt", 4, 5, "Romantic", ["tender"], "6 Consolations S 172"],
-["Consolation No 5", "E Major", "Liszt", 3, 4, "Romantic", ["tender", "sleepy"], "6 Consolations S 172"],
-["Consolation No 6", "E Major", "Liszt", 3, 4, "Romantic", ["tender", "sleepy"], "6 Consolations S 172"],
+["Consolation No 1", "E Major", "Liszt", 2, 4, "Romantic", ["tender", "sleepy"], "Six Consolations S 172"],
+["Consolation No 2", "E Major", "Liszt", 4, 4, "Romantic", ["tender", "sleepy"], "Six Consolations S 172"],
+["Consolation No 3", "Db Major", "Liszt", 6, 2, "Romantic", ["tender", "sleepy", "zen"], "Six Consolations S 172"],
+["Consolation No 4", "Db Major", "Liszt", 4, 5, "Romantic", ["tender"], "Six Consolations S 172"],
+["Consolation No 5", "E Major", "Liszt", 3, 4, "Romantic", ["tender", "sleepy"], "Six Consolations S 172"],
+["Consolation No 6", "E Major", "Liszt", 3, 4, "Romantic", ["tender", "sleepy"], "Six Consolations S 172"],
 ["Eglogue", "Ab Major", "Liszt", 4, 3, "Romantic", ["tender", "sleepy"], ["Years of Pilgrimage 1: Switzerland S 160", 6]],
 ["Elegie S 168", "Ab Major", "Liszt", 8, 4, "Romantic", [], ""],
 ["Etude S 141 No 1", "g minor", "Liszt", 5, 4, "Romantic", [], ["Six Grand Paganini Etudes S 141", 1]],
@@ -325,12 +328,12 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Etude S 141 No 6", "a minor", "Liszt", 5, 4, "Romantic", [], ["Six Grand Paganini Etudes S 141", 6]],
 ["Fantasia D 940 Mvt 1", "f minor", "Liszt", 5, 4, "Romantic", ["tender", "sleepy"], ""],
 ["Galop de Bal S 220", "Bb Major", "Liszt", 1, 4, "Romantic", ["stamina"], ""],
-["Gnomenreigen", "f# minor", "Liszt", 3, 4, "Romantic", [], ["2 Concert Etudes S 145", 2]],
+["Gnomenreigen", "f# minor", "Liszt", 3, 4, "Romantic", [], ["Two Concert Etudes S 145", 2]],
 ["Grand Galop Chromatique S 219", "Eb Major", "Liszt", 4, 3, "Romantic", ["stamina"], ""],
 ["Hungarian Rhapsody S 244 No 2", "c# minor", "Liszt", 9, 2, "Romantic", ["dark"], ""],
-["Il Lamento", "Ab Major", "Liszt", 10, 3, "Romantic", [], ["3 Concert Etudes S 144", 1]],
+["Il Lamento", "Ab Major", "Liszt", 10, 3, "Romantic", [], ["Three Concert Etudes S 144", 1]],
 ["La Campanella", "g# minor", "Liszt", 5, 3, "Romantic", [], ["Six Grand Paganini Etudes S 141", 3]],
-["La Leggierezza", "f minor", "Liszt", 5, 2, "Romantic", ["dark"], ["3 Concert Etudes S 144", 2]],
+["La Leggierezza", "f minor", "Liszt", 5, 2, "Romantic", ["dark"], ["Three Concert Etudes S 144", 2]],
 ["Le mal du pays", "e minor", "Liszt", 6, 5, "Romantic", [], ["Years of Pilgrimage 1: Switzerland S 160", 7]],
 ["Les cloches de Geneve", "B Major", "Liszt", 6, 5, "Romantic", [], ["Years of Pilgrimage 1: Switzerland S 160", 8]],
 ["Liebestraum No 1", "Ab Major", "Liszt", 8, 4, "Romantic", ["tender"], "Liebestraume S 541"],
@@ -351,8 +354,8 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["The Nightingale S 250", "c# minor", "Liszt", 4, 4, "Romantic", [], ""],
 ["Transcendental Etude S 139 No 3", "F Major", "Liszt", 5, 4, "Romantic", ["sleepy"], ""],
 ["Transcendental Etude S 139 No 8", "c minor", "Liszt", 6, 5, "Romantic", [], ""],
-["Un Sospiro", "Db Major", "Liszt", 6, 1, "Romantic", ["tender", "sleepy", "zen"], ["3 Concert Etudes S 144", 3]],
-["Waldesrauschen", "Db Major", "Liszt", 5, 2, "Romantic", ["tender", "sleepy", "zen"], ["2 Concert Etudes S 145", 1]],
+["Un Sospiro", "Db Major", "Liszt", 6, 1, "Romantic", ["tender", "sleepy", "zen"], ["Three Concert Etudes S 144", 3]],
+["Waldesrauschen", "Db Major", "Liszt", 5, 2, "Romantic", ["tender", "sleepy", "zen"], ["Two Concert Etudes S 145", 1]],
 ["Intermezzo from Cavalleria Rusticana", "F Major", "Mascagni", 4, 4, "Romantic", [], ""],
 ["Meditation from Thais", "D Major", "Massenet", 5, 4, "Romantic", ["tender"], ""],
 ["A Midsummer Nights Dream Overture", "E Major", "Mendelssohn", 13, 4, "Romantic", [], ["A Midsummer Nights Dream", 1]],
@@ -439,7 +442,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["How Fair This Spot Op 21 No 7", "A Major", "Rachmaninoff", 3, 4, "Romantic", ["tender"], ""],
 ["Italian Polka", "eb minor", "Rachmaninoff", 4, 4, "Romantic", ["dark"], ""],
 ["Lilacs Op 21 No 5", "Ab Major", "Rachmaninoff", 3, 1, "Romantic", ["sleepy", "impressions"], ""],
-["Melody Op 3 No 3", "E Major", "Rachmaninoff", 5, 4, "Romantic", ["sleepy, impressions"],  ["Morceaux de Fantaisie Op 3", 3]],
+["Melody Op 3 No 3", "E Major", "Rachmaninoff", 5, 4, "Romantic", ["sleepy, impressions"], ["Morceaux de Fantaisie Op 3", 3]],
 ["Moments Musicaux Op 16 No 1", "bb minor", "Rachmaninoff", 7, 4, "Romantic", ["impressions"], ""],
 ["Moments Musicaux Op 16 No 4", "e minor", "Rachmaninoff", 4, 4, "Romantic", [], ""],
 ["Moments Musicaux Op 16 No 5", "Db Major", "Rachmaninoff", 4, 4, "Romantic", ["sleepy, impressions"], ""],
@@ -458,7 +461,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Sonata No 1", "d minor", "Rachmaninoff", 36, 2, "Contemporary", ["legendary"], "Piano Sonatas"],
 ["Piano Sonata No 2", "bb minor", "Rachmaninoff", 23, 2, "Contemporary", ["legendary", "dark", "experimental"], "Piano Sonatas"],
 ["Polichinelle Op 3 No 4", "f# minor", "Rachmaninoff", 4, 4, "Romantic", ["impressions"], ["Morceaux de Fantaisie Op 3", 4]],
-["Prelude Op 3 No 2", "c# minor", "Rachmaninoff", 4, 3, "Romantic", ["dark"],  ["Morceaux de Fantaisie Op 3", 2]],
+["Prelude Op 3 No 2", "c# minor", "Rachmaninoff", 4, 3, "Romantic", ["dark"], ["Morceaux de Fantaisie Op 3", 2]],
 ["Prelude Op 23 No 1", "f# minor", "Rachmaninoff", 4, 5, "Romantic", [], ""],
 ["Prelude Op 23 No 2", "Bb Major", "Rachmaninoff", 4, 3, "Romantic", ["stamina"], ""],
 ["Prelude Op 23 No 4", "D Major", "Rachmaninoff", 6, 4, "Romantic", ["tender", "sleepy"], ""],
@@ -556,6 +559,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Des Abends Op 12 No 1", "Db Major", "Schumann", 4, 5, "Romantic", ["sleepy"], ""],
 ["Einfach Op 20 No 1", "Bb Major", "Schumann", 6, 5, "Romantic", [], ""],
 ["Eintritt", "Bb Major", "Schumann", 2, 5, "Romantic", [], ""],
+["Freundliche Landschaft", "F Major", "Schumann", 2, 5, "Romantic", [], ""],
 ["In der Nacht Op 12 No 5", "f minor", "Schumann", 4, 5, "Romantic", ["dark"], ""],
 ["Of Foreign Lands and Peoples", "G Major", "Schumann", 2, 5, "Romantic", ["sleepy"], ""],
 ["Piano Concerto Op 54 Mvt 1", "a minor", "Schumann", 13, 4, "Romantic", [], "Piano Concerto Op 54"],
@@ -564,6 +568,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Sonata No 1 Op 11", "f# minor", "Schumann", 30, 4, "Romantic", [], ""],
 ["Sonata No 2 Op 22", "g minor", "Schumann", 18, 3, "Romantic", ["dark", "legendary"], ""],
 ["Sonata No 3 Op 14 Mvt 1", "f minor", "Schumann", 8, 4, "Romantic", ["dark", "legendary"], ""],
+["Vogel als Prophet", "g minor", "Schumann", 3, 4, "Romantic", [], ""],
 ["Widmung", "Ab Major", "Schumann", 4, 4, "Romantic", ["tender"], ""],
 ["Etude Op 8 No 12", "d# minor", "Scriabin", 3, 4, "Romantic", ["dark"], ""],
 ["Etude Op 42 No 5", "c# minor", "Scriabin", 3, 4, "Romantic", ["dark", "impressions"], ""],
@@ -633,7 +638,6 @@ albums it belongs in can either be a string or a list. if a list, stores [album 
 //Build album map
 
 const albumMap = new Map();
-
 for (let i = 0; i < pieces.length; i++) {
     const data = pieces[i];
     const albumInfo = data[data.length - 1];
@@ -653,11 +657,10 @@ for (let i = 0; i < pieces.length; i++) {
 
     if (typeof albumInfo === "string") {
         albumList.push([data[0], composer, data[3], i]);
-    } 
+    }
     else {
         const idx = albumInfo[1] - 1;
         albumList[idx] = [data[0], composer, data[3], i];
     }
 }
-
 const albumList = Array.from(albumMap.keys()).sort();

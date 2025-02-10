@@ -1,7 +1,6 @@
 let songTable = document.getElementById("songs");
 
-for (let i = 0; i < pieces.length; i++)
-{
+for (let i = 0; i < pieces.length; i++) {
     let row = songTable.insertRow(-1);
     let id = row.insertCell(0);
     id.innerHTML = i + 1;
