@@ -73,18 +73,18 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Carmen Prelude", "A Major", "Bizet", 3, 4, "Romantic", [], ""],
 ["Habanera", "D Major", "Bizet", 3, 4, "Romantic", [], ""],
 ["Toreador Song", "F Major", "Bizet", 3, 4, "Romantic", [], ""],
-["Ballade Op 118 No 3", "g minor", "Brahms", 4, 5, "Romantic", [], ["6 Piano Pieces Op 118", 3]],
+["Ballade Op 118 No 3", "g minor", "Brahms", 4, 5, "Romantic", [], ["Six Piano Pieces Op 118", 3]],
 ["Capriccio Op 76 No 1", "f# minor", "Brahms", 4, 4, "Romantic", [""], ""],
 ["Capriccio Op 76 No 2", "b minor", "Brahms", 4, 4, "Romantic", [""], ""],
 ["Capriccio Op 116 No 3", "g minor", "Brahms", 3, 4, "Romantic", ["stamina"], ""],
 ["Hungarian Dance No 1", "g minor", "Brahms", 3, 5, "Romantic", [], ""],
 ["Hungarian Dance No 5", "g minor", "Brahms", 4, 4, "Romantic", [], ""],
 ["Intermezzo Op 117 No 1", "Eb Major", "Brahms", 5, 4, "Romantic", ["tender", "sleepy"], ""],
-["Intermezzo Op 118 No 1", "a minor", "Brahms", 2, 4, "Romantic", [], ["6 Piano Pieces Op 118", 1]],
-["Intermezzo Op 118 No 2", "A Major", "Brahms", 6, 4, "Romantic", [], ["6 Piano Pieces Op 118", 2]],
-["Intermezzo Op 118 No 4", "f minor", "Brahms", 3, 5, "Romantic", [], ["6 Piano Pieces Op 118", 4]],
-["Intermezzo Op 118 No 6", "eb minor", "Brahms", 6, 4, "Romantic", [], ["6 Piano Pieces Op 118", 6]],
-["Lullaby Op 49 No 4", "Eb Major", "Brahms", 3, 5, "Romantic", ["sleepy"], ["6 Piano Pieces Op 118", 1]],
+["Intermezzo Op 118 No 1", "a minor", "Brahms", 2, 4, "Romantic", [], ["Six Piano Pieces Op 118", 1]],
+["Intermezzo Op 118 No 2", "A Major", "Brahms", 6, 4, "Romantic", [], ["Six Piano Pieces Op 118", 2]],
+["Intermezzo Op 118 No 4", "f minor", "Brahms", 3, 5, "Romantic", [], ["Six Piano Pieces Op 118", 4]],
+["Intermezzo Op 118 No 6", "eb minor", "Brahms", 6, 4, "Romantic", [], ["Six Piano Pieces Op 118", 6]],
+["Lullaby Op 49 No 4", "Eb Major", "Brahms", 3, 5, "Romantic", ["sleepy"], ["Six Piano Pieces Op 118", 1]],
 ["Piano Concerto No 1 Mvt 1", "d minor", "Brahms", 25, 4, "Romantic", [], "Piano Concerto No 1"],
 ["Piano Concerto No 1 Mvt 2", "D Major", "Brahms", 15, 4, "Romantic", [], "Piano Concerto No 1"],
 ["Piano Concerto No 1 Mvt 3", "d minor", "Brahms", 13, 4, "Romantic", [], "Piano Concerto No 1"],
@@ -94,7 +94,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Concerto No 2 Mvt 4", "Bb Major", "Brahms", 10, 4, "Romantic", [], "Piano Concerto No 2"],
 ["Rhapsody Op 79 No 1", "b minor", "Brahms", 9, 2, "Romantic", ["stamina"], "Two Rhapsodies Op 79"],
 ["Rhapsody Op 79 No 2", "g minor", "Brahms", 7, 3, "Romantic", ["dark"], "Two Rhapsodies Op 79"],
-["Romance Op 118 No 5", "F Major", "Brahms", 4, 4, "Romantic", [], ["6 Piano Pieces Op 118", 5]],
+["Romance Op 118 No 5", "F Major", "Brahms", 4, 4, "Romantic", [], ["Six Piano Pieces Op 118", 5]],
 ["Sonata No 1", "C Major", "Brahms", 25, 5, "Romantic", [], "Piano Sonatas"],
 ["Sonata No 2", "f# minor", "Brahms", 25, 5, "Romantic", [], "Piano Sonatas"],
 ["Sonata No 3", "Bb Major", "Brahms", 34, 4, "Romantic", [], "Piano Sonatas"],
@@ -106,9 +106,9 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Ballade No 4", "f minor", "Chopin", 12, 4, "Romantic", [], "Four Ballades"],
 ["Barcarolle Op 60", "F# Major", "Chopin", 9, 4, "Romantic", [], ""],
 ["Berceuse Op 57", "Db Major", "Chopin", 5, 3, "Romantic", ["tender"], ""],
-["Ecossaise Op 72 No 3", "D Major", "Chopin", 1, 5, "Romantic", [], "3 Ecossaises Op 72"],
-["Ecossaise Op 72 No 4", "G Major", "Chopin", 1, 5, "Romantic", [], "3 Ecossaises Op 72"],
-["Ecossaise Op 72 No 5", "Db Major", "Chopin", 1, 5, "Romantic", [], "3 Ecossaises Op 72"],
+["Ecossaise Op 72 No 3", "D Major", "Chopin", 1, 5, "Romantic", [], "Three Ecossaises Op 72"],
+["Ecossaise Op 72 No 4", "G Major", "Chopin", 1, 5, "Romantic", [], "Three Ecossaises Op 72"],
+["Ecossaise Op 72 No 5", "Db Major", "Chopin", 1, 5, "Romantic", [], "Three Ecossaises Op 72"],
 ["Etude Op 10 No 1", "C Major", "Chopin", 2, 4, "Romantic", [], "Etudes Op 10"],
 ["Etude Op 10 No 2", "a minor", "Chopin", 2, 5, "Romantic", [], "Etudes Op 10"],
 ["Etude Op 10 No 3", "E Major", "Chopin", 5, 5, "Romantic", [], "Etudes Op 10"],
@@ -170,12 +170,12 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Concerto No 2 Op 21 Mvt 2", "Ab Major", "Chopin", 12, 4, "Romantic", ["tender"], "Piano Concerto No 2"],
 ["Piano Concerto No 2 Op 21 Mvt 3", "f minor", "Chopin", 10, 2, "Romantic", [], "Piano Concerto No 2"],
 ["Polonaise Fantaisie Op 61", "Ab Major", "Chopin", 14, 4, "Romantic", ["experimental"], ""],
-["Polonaise Op 26 No 1", "c# minor", "Chopin", 8, 4, "Romantic", ["dark"], "7 Polonaises"],
-["Polonaise Op 26 No 2", "eb minor", "Chopin", 8, 3, "Romantic", [], "7 Polonaises"],
-["Polonaise Op 40 No 1", "A Major", "Chopin", 5, 3, "Romantic", ["stamina"], "7 Polonaises"],
-["Polonaise Op 40 No 2", "c minor", "Chopin", 8, 5, "Romantic", [], "7 Polonaises"],
-["Polonaise Op 44", "f# minor", "Chopin", 11, 4, "Romantic", ["dark", "stamina"], "7 Polonaises"],
-["Polonaise Op 53", "Ab Major", "Chopin", 7, 3, "Romantic", ["stamina"], "7 Polonaises"],
+["Polonaise Op 26 No 1", "c# minor", "Chopin", 8, 4, "Romantic", ["dark"], "Seven Polonaises"],
+["Polonaise Op 26 No 2", "eb minor", "Chopin", 8, 3, "Romantic", [], "Seven Polonaises"],
+["Polonaise Op 40 No 1", "A Major", "Chopin", 5, 3, "Romantic", ["stamina"], "Seven Polonaises"],
+["Polonaise Op 40 No 2", "c minor", "Chopin", 8, 5, "Romantic", [], "Seven Polonaises"],
+["Polonaise Op 44", "f# minor", "Chopin", 11, 4, "Romantic", ["dark", "stamina"], "Seven Polonaises"],
+["Polonaise Op 53", "Ab Major", "Chopin", 7, 3, "Romantic", ["stamina"], "Seven Polonaises"],
 ["Polonaise Op 71 No 1", "d minor", "Chopin", 6, 5, "Romantic", [], ""],
 ["Polonaise Op 71 No 2", "Bb Major", "Chopin", 7, 4, "Romantic", [], ""],
 ["Polonaise Op 71 No 3", "f minor", "Chopin", 8, 5, "Romantic", [], ""],
@@ -392,7 +392,6 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Piano Concerto Op 59 Mvt 2", "c# minor", "Moszkowski", 9, 4, "Romantic", ["dark"], "Piano Concerto Op 59"],
 ["Piano Concerto Op 59 Mvt 3", "c# minor", "Moszkowski", 8, 4, "Romantic", ["stamina"], "Piano Concerto Op 59"],
 ["Piano Concerto Op 59 Mvt 4", "E Major", "Moszkowski", 10, 4, "Romantic", ["stamina"], "Piano Concerto Op 59"],
-["12 Variations Ah vous diraisje maman", "C Major", "Mozart", 9, 4, "Classical", [], ""],
 ["Clarinet Concerto Mvt 1", "A Major", "Mozart", 13, 3, "Classical", [], "Clarinet Concerto"],
 ["Clarinet Concerto Mvt 2", "D Major", "Mozart", 8, 3, "Classical", ["uplifting"], "Clarinet Concerto"],
 ["Clarinet Concerto Mvt 3", "A Major", "Mozart", 9, 4, "Classical", [], "Clarinet Concerto"],
@@ -408,6 +407,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Symphony No 40 Mvt 4", "g minor", "Mozart", 5, 5, "Classical", ["stamina"], ""],
 ["Symphony No 41 Mvt 1", "C Major", "Mozart", 8, 5, "Classical", ["stamina"], ""],
 ["Symphony No 41 Mvt 4", "C Major", "Mozart", 7, 5, "Classical", ["stamina"], ""],
+["Twelve Variations Ah vous diraisje maman", "C Major", "Mozart", 9, 4, "Classical", [], ""],
 ["Night on Bald Mountain", "d minor", "Mussorgsky", 10, 4, "Romantic", ["stamina"], ""],
 ["Une Larme", "g minor", "Mussorgsky", 5, 5, "Romantic", [], ""],
 ["Galop Infernal", "D Major", "Offenbach", 6, 4, "Romantic", [], ""],
@@ -424,14 +424,14 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Musettas Waltz", "E Major", "Puccini", 4, 4, "Romantic", [], ""],
 ["Barcarolle", "g minor", "Rachmaninoff", 8, 4, "Romantic", ["sad", "tender"], ""],
 ["Elegie Op 3 No 1", "eb minor", "Rachmaninoff", 6, 4, "Romantic", ["sleepy, impressions"], ["Morceaux de Fantaisie Op 3", 1]],
-["Etude-Tableaux Op 33 No 1", "f minor", "Rachmaninoff", 3, 5, "Contemporary", [], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 2", "C Major", "Rachmaninoff", 3, 5, "Contemporary", [], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 3", "c minor", "Rachmaninoff", 6, 5, "Contemporary", [], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 4", "d minor", "Rachmaninoff", 4, 5, "Contemporary", ["impressions"], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 5", "eb minor", "Rachmaninoff", 2, 5, "Contemporary", ["impressions"], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 6", "Eb Major", "Rachmaninoff", 2, 2, "Contemporary", ["stamina"], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 7", "g minor", "Rachmaninoff", 5, 4, "Contemporary", [], "8 Etude-Tableaux Op 33"],
-["Etude-Tableaux Op 33 No 8", "c# minor", "Rachmaninoff", 3, 5, "Contemporary", [], "8 Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 1", "f minor", "Rachmaninoff", 3, 5, "Contemporary", [], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 2", "C Major", "Rachmaninoff", 3, 5, "Contemporary", [], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 3", "c minor", "Rachmaninoff", 6, 5, "Contemporary", [], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 4", "d minor", "Rachmaninoff", 4, 5, "Contemporary", ["impressions"], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 5", "eb minor", "Rachmaninoff", 2, 5, "Contemporary", ["impressions"], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 6", "Eb Major", "Rachmaninoff", 2, 2, "Contemporary", ["stamina"], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 7", "g minor", "Rachmaninoff", 5, 4, "Contemporary", [], "Eight Etude-Tableaux Op 33"],
+["Etude-Tableaux Op 33 No 8", "c# minor", "Rachmaninoff", 3, 5, "Contemporary", [], "Eight Etude-Tableaux Op 33"],
 ["Etude-Tableaux Op 39 No 1", "c minor", "Rachmaninoff", 3, 4, "Contemporary", ["impressions"], ""],
 ["Etude-Tableaux Op 39 No 2", "a minor", "Rachmaninoff", 7, 3, "Contemporary", ["impressions"], ""],
 ["Etude-Tableaux Op 39 No 3", "f# minor", "Rachmaninoff", 3, 5, "Contemporary", ["impressions"], ""],
@@ -641,20 +641,17 @@ const albumMap = new Map();
 for (let i = 0; i < pieces.length; i++) {
     const data = pieces[i];
     const albumInfo = data[data.length - 1];
-
     if (albumInfo === "") {
         continue;
     }
 
     const composer = data[2];
     const albumName = typeof albumInfo === "string" ? `${composer}: ${albumInfo}` : `${composer}: ${albumInfo[0]}`;
-
     if (!albumMap.has(albumName)) {
         albumMap.set(albumName, []);
     }
 
     const albumList = albumMap.get(albumName);
-
     if (typeof albumInfo === "string") {
         albumList.push([data[0], composer, data[3], i]);
     }
