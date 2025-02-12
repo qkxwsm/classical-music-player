@@ -472,7 +472,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Prelude Op 32 No 5", "G Major", "Rachmaninoff", 4, 2, "Romantic", ["uplifting", "sleepy, impressions"], ""],
 ["Prelude Op 32 No 12", "g# minor", "Rachmaninoff", 3, 4, "Romantic", [], ""],
 ["Rhapsody on a Theme by Paganini", "a minor", "Rachmaninoff", 25, 3, "Contemporary", [], ""],
-["Romance Op 17 No 3", "Ab Major", "Rachmaninoff", 8, 4, "Romantic", ["tender", "uplifting"]],
+["Romance Op 17 No 3", "Ab Major", "Rachmaninoff", 8, 4, "Romantic", ["tender", "uplifting"], ""],
 ["Serenade Op 3 No 5", "bb minor", "Rachmaninoff", 4, 4, "Romantic", [], ["Morceaux de Fantaisie Op 3", 5]],
 ["Symphonic Dance Op 45 No 1", "c minor", "Rachmaninoff", 12, 5, "Romantic", [], ""],
 ["Symphony No 2 Mvt 1", "e minor", "Rachmaninoff", 21, 1, "Romantic", ["legendary"], "Symphony No 2"],
