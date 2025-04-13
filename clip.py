@@ -1,8 +1,7 @@
-from moviepy.video.io.VideoFileClip import VideoFileClip
+from moviepy.video.io.VideoFileClip import AudioFileClip, VideoFileClip
 
-# Define the input file and cutoff points
 input_file = "file.mp4"
-cutoff_points = ["0:00", "9:17", "18:17", "27:41"]
+cutoff_points = ["0:00", "4:03", "8:46", "11:34", "16:35"]
 
 # Convert cutoff points to seconds
 def time_to_seconds(time_str):
@@ -11,15 +10,24 @@ def time_to_seconds(time_str):
 
 cutoff_seconds = [time_to_seconds(t) for t in cutoff_points]
 
-# Process the video file
-video = VideoFileClip(input_file)
+# Try loading the video, fall back to audio if needed
+try:
+    media = VideoFileClip(input_file)
+except Exception:
+    media = AudioFileClip(input_file)
 
 # Loop through cutoff points to create segments
 for i in range(len(cutoff_seconds) - 1):
     start_time = cutoff_seconds[i]
     end_time = cutoff_seconds[i + 1]
-    segment = video.subclip(start_time, end_time)
+    segment = media.subclip(start_time, end_time)
     output_file = f"clip_{i+1}.mp4"
-    segment.write_videofile(output_file, codec="libx264", audio_codec="aac", audio=True)
 
-print("Clipping completed!")
+    # Remove video if present, keep only audio
+    if hasattr(segment, "audio") and segment.audio is not None:
+        audio_only = segment.audio
+        audio_only.write_audiofile(output_file, codec="aac")
+    else:
+        segment.write_audiofile(output_file, codec="aac")
+
+print("Audio clipping completed!")
