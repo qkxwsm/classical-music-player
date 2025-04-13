@@ -1,7 +1,7 @@
 from moviepy.video.io.VideoFileClip import AudioFileClip, VideoFileClip
 
 input_file = "file.mp4"
-cutoff_points = ["0:00", "4:03", "8:46", "11:34", "16:35"]
+cutoff_points = ["0:00", "2:04", "3:25", "5:43", "7:18", "9:58", "10:42", "11:23"]
 
 # Convert cutoff points to seconds
 def time_to_seconds(time_str):
