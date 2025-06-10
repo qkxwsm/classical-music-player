@@ -7,15 +7,21 @@ function getRandom(k) {
     return Math.floor(Math.random() * k);
 }
 
+const PIECE_INDEX = Math.random();
+
 /**
  * Helper function, returns the filepath to the piece with the specified ID.
  * @param {number} pid - Integer piece ID.
  * @returns {string} - Filepath to the piece.
  */
-function getFile(pid) {
+function getFile(pid, idx = 0) {
     const piece = pieces[pid][0];
     const composer = pieces[pid][2];
-    return `Music/${composer} ${piece}.mp4`;
+    if (idx === 0) {
+        return `Music/${composer} ${piece}.mp4`;
+    } else {
+        return `Music/${composer} ${piece} ${idx}.mp4`;
+    }
 }
 
 /**
@@ -47,13 +53,14 @@ let listener = function (e) {
  * Start playing a piece.
  * @param {number} piece - Integer piece index.
  */
-function playMusic(piece) {
-    taken.add(piece);
-    console.log(toString(piece, false));
+function playMusic(pid) {
+    taken.add(pid);
+    console.log(toString(pid, false));
     const audio = document.getElementById('audio');
-    const loc = getFile(piece);
+    const numChoices = pieces[pid][8];
+    const loc = getFile(pid, Math.floor(PIECE_INDEX * numChoices));
     audio.setAttribute('src', loc);
-    document.getElementById('current').textContent = toString(piece, true);
+    document.getElementById('current').textContent = toString(pid, true);
     audio.play();
 }
 
