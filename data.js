@@ -385,7 +385,7 @@ const pieces = [["Aragon", "F Major", "Albeniz", 5, 5, "Contemporary", [], ["Sui
 ["Transcendental Etude S 139 No 1", "C Major", "Liszt", 1, 5, "Romantic", [], "", 1],
 ["Transcendental Etude S 139 No 3", "F Major", "Liszt", 5, 4, "Romantic", ["sleepy"], "", 1],
 ["Transcendental Etude S 139 No 8", "c minor", "Liszt", 6, 5, "Romantic", [], "", 1],
-["Un Sospiro", "Db Major", "Liszt", 6, 1, "Romantic", ["tender", "sleepy", "zen"], ["Three Concert Etudes S 144", 3], 3],
+["Un Sospiro", "Db Major", "Liszt", 6, 1, "Romantic", ["tender", "sleepy", "zen"], ["Three Concert Etudes S 144", 3], 4],
 ["Waldesrauschen", "Db Major", "Liszt", 5, 2, "Romantic", ["tender", "sleepy", "zen"], ["Two Concert Etudes S 145", 1], 1],
 ["Intermezzo from Cavalleria Rusticana", "F Major", "Mascagni", 4, 4, "Romantic", [], "", 1],
 ["Meditation from Thais", "D Major", "Massenet", 5, 4, "Romantic", ["tender"], "", 1],
@@ -710,7 +710,7 @@ albums it belongs in can either be a string or a list. if a list, stores [album 
 const albumMap = new Map();
 for (let i = 0; i < pieces.length; i++) {
     const data = pieces[i];
-    const albumInfo = data[data.length - 1];
+    const albumInfo = data[7];
     if (albumInfo === "") {
         continue;
     }
