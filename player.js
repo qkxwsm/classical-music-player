@@ -7,7 +7,10 @@ function getRandom(k) {
     return Math.floor(Math.random() * k);
 }
 
-const PIECE_INDEX = Math.random();
+let PIECE_INDEX = 0;
+function reseed() {
+    PIECE_INDEX = Math.random();
+}
 
 /**
  * Helper function, returns the filepath to the piece with the specified ID.
