@@ -128,6 +128,37 @@ function toggle() {
     return;
 }
 
+const SHARP_MAJ = new Set(["C","G","D","A","E","B","F#","C#"]);
+const FLAT_MAJ  = new Set(["C","F","Bb","Eb","Ab","Db","Gb","Cb"]);
+const SHARP_MIN = new Set(["A","E","B","F#","C#","G#","D#","A#"]);
+const FLAT_MIN  = new Set(["A","D","G","C","F","Bb","Eb","Ab"]);
+
+/*
+ * Checks if a key matches a required key.
+ */
+function keyMatches(key, required) {
+    if (required === "") {
+        return true;
+    }
+    const s = key.toLowerCase();
+    const m = s.match(/^([A-Ga-g])([#b]?)[ ]*(major|minor)$/i);
+    if (!m) return false;
+    
+    const tonic = m[1].toUpperCase() + (m[2] || "");
+    const mode  = m[3].toLowerCase();
+    
+    switch (required) {
+        case "Major":       return mode === "major";
+        case "Minor":       return mode === "minor";
+        case "Sharp Major": return (mode === "major" && SHARP_MAJ.has(tonic));
+        case "Flat Major":  return (mode === "major" && FLAT_MAJ.has(tonic));
+        case "Sharp Minor": return (mode === "minor" && SHARP_MIN.has(tonic));
+        case "Flat Minor":  return (mode === "minor" && FLAT_MIN.has(tonic));
+        default:            return false;
+    }
+}
+
+
 /*
  * Generates a new piece id, according to the most recent conditions.
  * @returns {number} - Generated piece id.
@@ -148,6 +179,12 @@ function gen() {
             break;
         case 2:
             // Advanced
+            for (let i = 0; i < 10; i++) {
+                const key = pieces[i][1];
+                console.log(key);
+                console.log(required_value[4]);
+                console.log(keyMatches(key, required_value[4]));
+            }
             const candidates = pieces
                 .map(([name, key, composer, duration, rating, era, playlist, album], pid) => ({
                     pid, name, key, composer, duration, rating, era, playlist, album,
@@ -158,7 +195,7 @@ function gen() {
                     duration >= required_value[1] &&
                     duration <= required_value[2] &&
                     rating <= required_value[3] &&
-                    key.endsWith(required_value[4]) &&
+                    keyMatches(key, required_value[4]) &&
                     era.includes(required_value[5]) &&
                     (required_value[6] === "" || playlist.includes(required_value[6]))
                 )
