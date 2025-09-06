@@ -71,8 +71,13 @@
     <header>
         <h1 style="font-size:40px;">Music Player</h1>
     </header>
-    <a href="ref.html">Go to Piece List</a> &nbsp; &nbsp;
-    <a href="albums.html">Go to Album List</a>
+    <div style="display: inline-flex; align-items: center; gap: 1rem; font-size: 1rem; line-height: 1; margin: 0; padding: 0;">
+        <a href="ref.html" style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">Go to Piece List</a>
+        <a href="albums.html" style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">Go to Album List</a>
+        <span style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">
+            Seed: <label id="seed" style="font-size: inherit; font-weight: normal; line-height: inherit;">0.0000</label>
+        </span>
+    </div>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="player.js"></script>
     <br>

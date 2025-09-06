@@ -7,9 +7,12 @@ function getRandom(k) {
     return Math.floor(Math.random() * k);
 }
 
-let PIECE_INDEX = 0;
+let PIECE_SEED = 0;
 function reseed() {
-    PIECE_INDEX = Math.random();
+    PIECE_SEED = Math.random();
+    const rounded = Math.round(PIECE_SEED * 10000) / 10000; // nearest hundredth
+    document.getElementById("seed").textContent =
+        typeof PIECE_SEED !== "undefined" ? rounded.toFixed(4) : "undefined";
 }
 
 /**
@@ -61,7 +64,7 @@ function playMusic(pid) {
     console.log(toString(pid, false));
     const audio = document.getElementById('audio');
     const numChoices = pieces[pid][8];
-    const loc = getFile(pid, Math.floor(PIECE_INDEX * numChoices));
+    const loc = getFile(pid, Math.floor(PIECE_SEED * numChoices));
     audio.setAttribute('src', loc);
     document.getElementById('current').textContent = toString(pid, true);
     audio.play();
