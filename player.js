@@ -184,9 +184,6 @@ function gen() {
             // Advanced
             for (let i = 0; i < 10; i++) {
                 const key = pieces[i][1];
-                console.log(key);
-                console.log(required_value[4]);
-                console.log(keyMatches(key, required_value[4]));
             }
             const candidates = pieces
                 .map(([name, key, composer, duration, rating, era, playlist, album], pid) => ({
