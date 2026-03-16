@@ -1,7 +1,7 @@
 from moviepy.video.io.VideoFileClip import AudioFileClip, VideoFileClip
 
 input_file = "file.mp4"
-cutoff_points = ["0:00", "1:00"]
+cutoff_points = ["0:00", "8:08", "14:54", "22:06"]
 def time_to_seconds(time_str):
     parts = list(map(int, time_str.split(":")))
     return parts[0] * 60 + parts[1]
@@ -18,7 +18,11 @@ except Exception:
 for i in range(len(cutoff_seconds) - 1):
     start_time = cutoff_seconds[i]
     end_time = cutoff_seconds[i + 1]
-    segment = media.subclip(start_time, end_time)
+    # MoviePy 1.x uses subclip; 2.x uses subclipped.
+    if hasattr(media, "subclip"):
+        segment = media.subclip(start_time, end_time)
+    else:
+        segment = media.subclipped(start_time, end_time)
     output_file = f"clip_{i+1}.mp4"
 
     # Remove video if present, keep only audio
