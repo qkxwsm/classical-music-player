@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+</html>
 
 <style>
     body {
@@ -9,7 +9,11 @@
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    .page-links {
+        font-size: 1rem;
     }
 
     div {
@@ -34,18 +38,80 @@
     th {
         cursor: pointer;
     }
+
+    @media (max-width: 520px) {
+        body {
+            margin: 0;
+            padding: 6px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .page-links {
+            font-size: 1rem;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 100%;
+            font-size: 11px;
+        }
+
+        th,
+        td {
+            padding: 2px;
+            overflow-wrap: anywhere;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 7%;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 34%;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 14%;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 24%;
+        }
+
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 13%;
+        }
+
+        th:nth-child(6),
+        td:nth-child(6) {
+            width: 8%;
+        }
+    }
 </style>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Piece List</title>
 </head>
 
 <body>
     <header>
-        <h1 style="font-size:40px;">Piece List</h1>
+        <h1>Piece List</h1>
     </header>
-    <a href="index.html">Go to Music Player</a> &nbsp; &nbsp;
-    <a href="albums.html">Go to Album List</a>
+    <div class="page-links">
+        <a href="index.html">Go to Music Player</a> &nbsp; &nbsp;
+        <a href="albums.html">Go to Album List</a>
+    </div>
     <br>
     <p id="list">
     <table class="sortable" id="songs">
@@ -64,4 +130,4 @@
     <script type="text/javascript" src="sorttable.js"></script>
 </body>
 
-<html>
+</html>

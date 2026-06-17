@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+</html>
 
 <style>
     body {
@@ -9,7 +9,11 @@
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    .page-links {
+        font-size: 1rem;
     }
 
     div {
@@ -19,7 +23,7 @@
     }
 
     p {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     table,
@@ -38,18 +42,42 @@
     th {
         cursor: pointer;
     }
+
+    @media (max-width: 520px) {
+        body {
+            margin: 0;
+            padding: 6px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .page-links {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
 </style>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Album List</title>
 </head>
 
 <body>
     <header>
-        <h1 style="font-size:40px;">Album List</h1>
+        <h1>Album List</h1>
     </header>
-    <a href="index.html">Go to Music Player</a> &nbsp; &nbsp;
-    <a href="ref.html">Go to Piece List</a>
+    <div class="page-links">
+        <a href="index.html">Go to Music Player</a> &nbsp; &nbsp;
+        <a href="ref.html">Go to Piece List</a>
+    </div>
     <br>
     <p id="albums">
     </p>
@@ -57,4 +85,4 @@
     <script type="text/javascript" src="albums.js"></script>
 </body>
 
-<html>
+</html>

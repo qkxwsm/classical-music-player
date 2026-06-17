@@ -5,8 +5,11 @@
     body 
     {
         transform: scale(1);
-        margin-left: 20px;
+        margin: 0;
+        padding: 14px;
         font-family: georgia;
+        max-width: 100vw;
+        box-sizing: border-box;
     }
     input 
     {
@@ -29,7 +32,7 @@
         width: 200px;
         height: 40px;
         line-height: 40px;
-        padding: 0;
+        padding: 0 0.5ch;
         margin: 0;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -58,12 +61,227 @@
     }
     audio 
     {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
         height: 50px;
+    }
+    .status-row
+    {
+        display: block;
+    }
+    .status-row span:first-child
+    {
+        display: block;
+    }
+    .button-row
+    {
+        display: inline;
+    }
+    .simple-actions
+    {
+        margin-top: 0;
+    }
+    .simple-actions button
+    {
+        width: 200px;
+    }
+    .album-actions
+    {
+        margin-top: 0;
+    }
+    .album-actions button
+    {
+        width: 200px;
+    }
+    .album-actions input[type=radio]
+    {
+        width: 5%;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .top-links
+    {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+    .section-title
+    {
+        margin-top: 0;
+    }
+    @media (max-width: 520px)
+    {
+        body
+        {
+            padding: 6px 8px;
+        }
+        div
+        {
+            font-size: 14px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        h1
+        {
+            font-size: 28px !important;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        br
+        {
+            display: none;
+        }
+        select
+        {
+            font-size: 14px;
+            width: 190px;
+            height: 28px;
+            line-height: 28px;
+        }
+        button
+        {
+            font-size: 13px;
+            width: auto;
+            height: 28px;
+            white-space: nowrap;
+        }
+        input
+        {
+            font-size: 14px;
+            width: 72px;
+            height: 28px;
+        }
+        audio
+        {
+            height: 38px;
+        }
+        .status-row
+        {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        .status-row span:first-child
+        {
+            display: inline;
+        }
+        .button-row
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            align-items: center;
+            width: 100%;
+        }
+        .status-row > .button-row
+        {
+            flex-basis: 100%;
+        }
+        .status-row button:nth-child(1)
+        {
+            width: auto;
+        }
+        .status-row button:nth-child(2)
+        {
+            width: auto;
+        }
+        .status-row button:nth-child(3)
+        {
+            width: auto;
+        }
+        .simple-actions button
+        {
+            width: auto;
+        }
+        .simple-actions
+        {
+            margin-top: 2px;
+        }
+        .album-actions
+        {
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        .album-actions button
+        {
+            width: auto;
+        }
+        .album-actions label
+        {
+            white-space: nowrap;
+        }
+        .album-actions input[type=radio]
+        {
+            width: 13px;
+            height: 13px;
+            margin-left: 2px;
+            margin-right: 1px;
+        }
+        .advanced-actions
+        {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3px;
+            width: 100%;
+        }
+        .advanced-actions button:nth-child(1)
+        {
+            width: auto;
+        }
+        .advanced-actions button:nth-child(2)
+        {
+            width: auto;
+        }
+        .advanced-actions button:nth-child(3)
+        {
+            width: auto;
+        }
+        .filter-row
+        {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+        .filter-row select
+        {
+            width: 108px;
+        }
+        .key-row select
+        {
+            width: 116px !important;
+        }
+        .key-row input
+        {
+            width: 42px !important;
+        }
+        .tier-row select
+        {
+            width: 44px !important;
+        }
+        .tier-row #playlist
+        {
+            width: 112px !important;
+        }
+        .top-links
+        {
+            margin-bottom: 20px;
+        }
+        .section-title
+        {
+            margin-top: 20px;
+        }
     }
 </style>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Music Player</title>
 </head>
 
@@ -71,7 +289,7 @@
     <header>
         <h1 style="font-size:40px;">Music Player</h1>
     </header>
-    <div style="display: inline-flex; align-items: center; gap: 1rem; font-size: 1rem; line-height: 1; margin: 0; padding: 0;">
+    <div class="top-links">
         <a href="ref.html" style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">Go to Piece List</a>
         <a href="albums.html" style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">Go to Album List</a>
         <span style="font-size: inherit; line-height: inherit; margin: 0; padding: 0;">
@@ -87,106 +305,115 @@
     </div>
     <div>
         <audio id="audio" controls="controls" playsinline>
-            <source src="" id="audioSource" type="audio/mp4">></source>
+            <source src="" id="audioSource" type="audio/mp4"></source>
             Your browser does not support the audio format.
         </audio>
     </div>
-    <div>
-        Next in Queue: <label id="next">undefined</label>
-    </div>
-    <div>
-        Autoplay: <label id="autoplay"> Off </label> <button id="toggle" onclick="toggle()">Toggle</button> <button id="clearQueue" onclick="clearQueue()">Clear Queue</button> <button id="clearQueue" onclick="playNext()">Next</button>
+    <div class="status-row">
+        <span>Next in Queue: <label id="next">undefined</label></span>
+        <span>Autoplay: <label id="autoplay"> Off </label></span>
+        <div class="button-row">
+            <button id="toggle" onclick="toggle()">Toggle</button>
+            <button id="clearQueue" onclick="clearQueue()">Clear Queue</button>
+            <button id="nextButton" onclick="playNext()">Next</button>
+        </div>
     </div>
     <br>
-    <div>
+    <div class="section-title">
         <b> Simple Player </b>
     </div>
     <div>
         Enter piece #:
         <input type="number" id="ids" value=0 style="width:200px;">
         </input>
-        <button onclick="playBy('id', true)">Play</button>
-        <button onclick="playBy('id', false)">Add to Queue</button>
+        <div class="button-row simple-actions">
+            <button onclick="playBy('id', true)">Play</button>
+            <button onclick="playBy('id', false)">Add to Queue</button>
+        </div>
     </div>
     <div>
         Choose piece:
         <select id="names">
             <option value="random"> Random </option>
         </select>
-        <button onclick="playBy('name', true)">Play</button>
-        <button onclick="playBy('name', false)">Add to Queue</button>
+        <div class="button-row simple-actions">
+            <button onclick="playBy('name', true)">Play</button>
+            <button onclick="playBy('name', false)">Add to Queue</button>
+        </div>
     </div>
     <div>
         Choose album:
         <select id="albums">
             <option value="random"> Random </option>
         </select>
-        <button onclick="playAlbum()">Play</button>
-        <input type="radio" name="order" id="ordered" checked> From Start
-        <input type="radio" name="order" id="random"> Random Order
+        <div class="button-row album-actions">
+            <button onclick="playAlbum()">Play</button>
+            <label><input type="radio" name="order" id="ordered" checked> From Start</label>
+            <label><input type="radio" name="order" id="random"> Random Order</label>
+        </div>
     </div>
     <br>
-    <div>
+    <div class="section-title">
         <b> Advanced Player </b>
     </div>
-    <div>
+    <div class="advanced-actions">
         <button onclick="playBy('advanced', true)">Play</button> 
         <button onclick="playBy('advanced', false)">Add to Queue</button>
         <button onclick="reseed()">Reseed</button>
     </div>
-    <div>
-        Composer: <select id="composer">
-            <option value=""> any </option>
-        </select>
-        Era: <select id="era">
-            <option value=""> any </option>
-            <option value="Baroque"> Baroque </option>
-            <option value="Classical"> Classical </option>
-            <option value="Romantic"> Romantic </option>
-            <option value="Contemporary"> Contemporary </option>
-        </select>
+    <div class="filter-row composer-row">
+        <span>Composer: <select id="composer">
+                <option value=""> any </option>
+            </select></span>
+        <span>Era: <select id="era">
+                <option value=""> any </option>
+                <option value="Baroque"> Baroque </option>
+                <option value="Classical"> Classical </option>
+                <option value="Romantic"> Romantic </option>
+                <option value="Contemporary"> Contemporary </option>
+            </select></span>
     </div>
-    <div>
-        Key: <select id="key" style="width:160px">
-            <option value=""> any </option>
-            <option value="Major">Major</option>
-            <option value="Minor">minor</option>
-            <option value="Sharp Major">Sharp Major</option>
-            <option value="Flat Major">Flat Major</option>
-            <option value="Sharp Minor">sharp minor</option>
-            <option value="Flat Minor">flat minor</option>
-        </select>
-        Length: <input type="number" id="low" value=0 style="width:100px;"> </input> - <input type="number" id="high"
-            value=42 style="width:100px;"> minutes </input>
+    <div class="filter-row key-row">
+        <span>Key: <select id="key" style="width:160px">
+                <option value=""> any </option>
+                <option value="Major">Major</option>
+                <option value="Minor">minor</option>
+                <option value="Sharp Major">Sharp Major</option>
+                <option value="Flat Major">Flat Major</option>
+                <option value="Sharp Minor">sharp minor</option>
+                <option value="Flat Minor">flat minor</option>
+            </select></span>
+        <span>Length: <input type="number" id="low" value=0 style="width:100px;"> </input> - <input type="number" id="high"
+                value=42 style="width:100px;"> minutes </input></span>
     </div>
-    <div>
-        Tier: at most <select id="tier" style="width:90px">
-            <option value=1>1</option>
-            <option value=2>2</option>
-            <option value=3>3</option>
-            <option value=4>4</option>
-            <option value=5 selected>5</option>
-        </select>
-        In playlist: <select id="playlist">
-            <option selected value> -- select an option -- </option>
-            <option value="dark"> Dark </option>
-            <option value="experimental"> Experimental </option>
-            <option value="impressions"> Impressions </option>
-            <option value="legendary"> Legendary </option>
-            <option value="nostalgia"> Nostalgia </option>
-            <option value="party"> Party </option>
-            <option value="sad"> Sad </option>
-            <option value="sleepy"> Sleepy </option>
-            <option value="stamina"> Stamina </option>
-            <option value="tender"> Tender </option>
-            <option value="troll"> Troll </option>
-            <option value="uplifting"> Uplifting </option>
-            <option value="zen"> Zen </option>
-        </select>
+    <div class="filter-row tier-row">
+        <span>Tier: at most <select id="tier" style="width:90px">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5 selected>5</option>
+            </select></span>
+        <span>In playlist: <select id="playlist">
+                <option selected value> -- select -- </option>
+                <option value="dark"> Dark </option>
+                <option value="experimental"> Experimental </option>
+                <option value="impressions"> Impressions </option>
+                <option value="legendary"> Legendary </option>
+                <option value="nostalgia"> Nostalgia </option>
+                <option value="party"> Party </option>
+                <option value="sad"> Sad </option>
+                <option value="sleepy"> Sleepy </option>
+                <option value="stamina"> Stamina </option>
+                <option value="tender"> Tender </option>
+                <option value="troll"> Troll </option>
+                <option value="uplifting"> Uplifting </option>
+                <option value="zen"> Zen </option>
+            </select></span>
     </div>
     <script type="text/javascript" src="selector.js"></script>
     <br>
-    <footer style="font-size:8px;"> Please let me (David Hu; <a href="davidhu598@gmail.com"> davidhu598@gmail.com</a>)
+    <footer style="font-size:8px;"> Please let me (David Hu; <a href="mailto:davidhu598@gmail.com"> davidhu598@gmail.com</a>)
         know if you find any errors. </footer>
 </body>
 

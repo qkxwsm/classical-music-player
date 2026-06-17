@@ -103,6 +103,15 @@ function enqueue() {
  * Plays the next piece in the queue. If none exists and autoplay is on, adds a new one to the queue.
  */
 function playNext() {
+    if (queueIndex >= queue.length) {
+        if (autoPlay) {
+            enqueue();
+        }
+        else {
+            updNext();
+            return;
+        }
+    }
     playMusic(queue[queueIndex]);
     queueIndex++;
     if (queueIndex === queue.length && autoPlay) {
