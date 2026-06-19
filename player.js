@@ -8,6 +8,10 @@ function getRandom(k) {
 }
 
 let PIECE_SEED = 0;
+const FILE_INDEX_OVERRIDES = {
+    "RimskyKorsakov|Capriccio Espagnol": [0, 2, 3, 4, 5],
+};
+
 function reseed() {
     PIECE_SEED = Math.random();
     const rounded = Math.round(PIECE_SEED * 10000) / 10000; // nearest hundredth
@@ -23,10 +27,12 @@ function reseed() {
 function getFile(pid, idx = 0) {
     const piece = pieces[pid][0];
     const composer = pieces[pid][2];
-    if (idx === 0) {
+    const override = FILE_INDEX_OVERRIDES[`${composer}|${piece}`];
+    const fileIndex = override ? override[idx] : idx;
+    if (fileIndex === 0) {
         return `Music/${composer} ${piece}.mp4`;
     } else {
-        return `Music/${composer} ${piece} ${idx}.mp4`;
+        return `Music/${composer} ${piece} ${fileIndex}.mp4`;
     }
 }
 
@@ -107,7 +113,7 @@ function playNext() {
         if (autoPlay) {
             enqueue();
         }
-        else {
+        if (queueIndex >= queue.length) {
             updNext();
             return;
         }
@@ -283,6 +289,10 @@ function playBy(type, forcePlay) {
             if (required_value == -1) {
                 condition_id = -1;
                 required_value = "";
+            }
+            else if (!Number.isInteger(required_value) || required_value < 0 || required_value >= pieces.length) {
+                alert("Please enter a valid piece number.");
+                return;
             }
             break;
         case "advanced":
