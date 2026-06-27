@@ -4,6 +4,7 @@ for (let albumIndex = 0; albumIndex < albumList.length; albumIndex++) {
     const key = albumList[albumIndex];
     const pieceList = albumMap.get(key);
     let albumInfo = document.createElement("p");
+    albumInfo.className = "album-entry";
     let albumLen = 1;
     for (let i = 0; i < pieceList.length; i++) {
         const piece = pieceList[i];
