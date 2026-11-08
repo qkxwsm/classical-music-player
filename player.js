@@ -92,10 +92,10 @@ function updNext() {
 /*
  * Adds a new piece to the queue and updates the piece that's coming next.
  */
-function enqueue() {
+function enqueue(stopOnDuplicate = true) {
     const nextSong = gen();
     if (nextSong === queue[queue.length - 1]) {
-        if (autoPlay) {
+        if (autoPlay && stopOnDuplicate) {
             toggle();
             updNext();
         }
@@ -139,9 +139,12 @@ function toggle() {
     }
     else {
         document.getElementById('audio').addEventListener('ended', listener, false);
-        enqueue();
         document.getElementById('autoplay').innerHTML = "On";
         autoPlay = true;
+        if (queueIndex >= queue.length) {
+            // Enabling autoplay must not immediately disable it for a duplicate.
+            enqueue(false);
+        }
     }
     return;
 }
